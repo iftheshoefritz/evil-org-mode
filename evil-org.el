@@ -329,7 +329,7 @@ For many org functions such as `org-insert-heading', this creates a heading belo
          (end-of-visible-line)
          (call-interactively #',cmd)
          (evil-insert nil))
-       #',newcmd)))
+       ',newcmd)))
 
 (defmacro evil-org-define-bol-command (cmd)
   "Return a function that executes CMD at bol and then enters insert state.
@@ -343,7 +343,7 @@ For many org functions such as `org-insert-heading', this creates a heading abov
          (beginning-of-line)
          (call-interactively #',cmd)
          (evil-insert nil))
-       #',newcmd)))
+       ',newcmd)))
 
 ;;; operators
 (evil-define-operator evil-org-> (beg end count)
